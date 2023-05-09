@@ -48,6 +48,7 @@ a {
     flex-direction: column;
     align-items: center;
     margin-bottom: 120px;
+    margin-top: 15px;
     .logo {
         margin-bottom: 60px;
     }
@@ -63,7 +64,7 @@ a {
     .main-menu {
         display: flex;
         li {
-            margin-inline-end: 10px;
+            margin-inline-end: 15px;
         }
         .menu-link {
             padding: 10px 20px;
@@ -186,12 +187,13 @@ a {
 }
 @media (max-width: 770px) {
     .navbar {
+        justify-content: space-between;
+        flex-direction: row;
         .main-menu {
             display: none;
         }
         .mob-menu {
             display: flex;
-            width: 100%;
         }
     }
 }
@@ -217,9 +219,7 @@ a {
             line-height: 40px;
             font-weight: 700;
         }
-        h2:hover {
-            color: var(--primary-color);
-        }
+
         p {
             line-height: 30px;
         }
@@ -263,9 +263,6 @@ a {
         font-weight: 700;
         line-height: 45px;
     }
-    h3:hover {
-        color: var(--primary-color);
-    }
 }
 .devo-who {
     margin-bottom: 120px;
@@ -280,9 +277,7 @@ a {
             font-weight: 700;
             margin-bottom: 30px;
         }
-        h2:hover {
-            color: var(--primary-color);
-        }
+
         p {
             line-height: 30px;
         }
@@ -331,9 +326,7 @@ a {
         h3 {
             font-weight: 700;
         }
-        h3:hover {
-            color: var(--primary-color);
-        }
+
         span {
             font-size: 18px;
         }
@@ -408,9 +401,7 @@ a {
             font-weight: 700;
             margin-bottom: 30px;
         }
-        h2:hover {
-            color: var(--primary-color);
-        }
+
         p {
             line-height: 30px;
         }
@@ -447,9 +438,11 @@ a {
             }
         }
         @media (max-width: 425px) {
-            align-items: center;
-            text-align: center;
             margin-inline-start: 0;
+            h2 {
+                text-align: center;
+                width: 100%;
+            }
             li {
                 text-align: start;
             }
@@ -547,6 +540,10 @@ a {
         padding-top: 50px;
         span {
             color: var(--primary-color);
+        }
+        img:hover {
+            opacity: 0.8;
+            cursor: pointer;
         }
         @media (max-width: 750px) {
             // flex-direction: column;
@@ -682,6 +679,7 @@ a {
             width: 100%;
             height: 100%;
         }
+
         .swiper-button-next-unique {
             height: 70px;
             width: 70px;
@@ -696,6 +694,10 @@ a {
             background-size: cover;
             width: 100%;
             height: 100%;
+        }
+        .swiper-button-prev-unique:hover,
+        .swiper-button-next-unique:hover {
+            opacity: 0.6;
         }
     }
 }

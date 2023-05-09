@@ -49,6 +49,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin-bottom: 120px;
+  margin-top: 15px;
 }
 .navbar .logo {
   margin-bottom: 60px;
@@ -66,8 +67,8 @@ a {
   display: flex;
 }
 .navbar .main-menu li {
-  -webkit-margin-end: 10px;
-          margin-inline-end: 10px;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
 }
 .navbar .main-menu .menu-link {
   padding: 10px 20px;
@@ -180,12 +181,15 @@ a {
   }
 }
 @media (max-width: 770px) {
+  .navbar {
+    justify-content: space-between;
+    flex-direction: row;
+  }
   .navbar .main-menu {
     display: none;
   }
   .navbar .mob-menu {
     display: flex;
-    width: 100%;
   }
 }
 .devo-intro {
@@ -209,9 +213,6 @@ a {
   margin-bottom: 30px;
   line-height: 40px;
   font-weight: 700;
-}
-.devo-intro .intro-content h2:hover {
-  color: var(--primary-color);
 }
 .devo-intro .intro-content p {
   line-height: 30px;
@@ -260,9 +261,6 @@ a {
   font-weight: 700;
   line-height: 45px;
 }
-.qoute h3:hover {
-  color: var(--primary-color);
-}
 
 .devo-who {
   margin-bottom: 120px;
@@ -277,9 +275,6 @@ a {
 .devo-who .who-content h2 {
   font-weight: 700;
   margin-bottom: 30px;
-}
-.devo-who .who-content h2:hover {
-  color: var(--primary-color);
 }
 .devo-who .who-content p {
   line-height: 30px;
@@ -334,9 +329,6 @@ a {
 }
 .devo-how .title h3 {
   font-weight: 700;
-}
-.devo-how .title h3:hover {
-  color: var(--primary-color);
 }
 .devo-how .title span {
   font-size: 18px;
@@ -423,9 +415,6 @@ a {
   font-weight: 700;
   margin-bottom: 30px;
 }
-.devo-services .services-content h2:hover {
-  color: var(--primary-color);
-}
 .devo-services .services-content p {
   line-height: 30px;
 }
@@ -466,10 +455,12 @@ a {
 }
 @media (max-width: 425px) {
   .devo-services .services-content {
-    align-items: center;
-    text-align: center;
     -webkit-margin-start: 0;
             margin-inline-start: 0;
+  }
+  .devo-services .services-content h2 {
+    text-align: center;
+    width: 100%;
   }
   .devo-services .services-content li {
     text-align: start;
@@ -572,6 +563,10 @@ a {
 }
 .devo-bottom-footer .content span {
   color: var(--primary-color);
+}
+.devo-bottom-footer .content img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .devo-bottom-footer .content span {
@@ -726,6 +721,10 @@ a {
   background-size: cover;
   width: 100%;
   height: 100%;
+}
+.devo-swiper .swiper .swiper-button-prev-unique:hover,
+.devo-swiper .swiper .swiper-button-next-unique:hover {
+  opacity: 0.6;
 }
 
 .devo-articles {
