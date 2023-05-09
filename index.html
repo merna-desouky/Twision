@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./assets/logo.svg" />
+
+        <title>Twision</title>
+        <!-- bootstrap style -->
+        <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+            integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
+            crossorigin="anonymous"
+        />
+        <!-- bootstrap style -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar">
+                        <a class="logo order-1 order-lg-0 order-md-0"
+                            ><img
+                                src="./assets/logo.svg"
+                                width="100%"
+                                height="90px"
+                        /></a>
+                        <ul class="main-menu">
+                            <li>
+                                <a class="menu-link active" href="./index.html"
+                                    >الرئيسية</a
+                                >
+                            </li>
+                            <li>
+                                <a class="menu-link" href="#">من نحن</a>
+                            </li>
+                            <li>
+                                <a class="menu-link" href="#">خدماتنا</a>
+                            </li>
+                            <li>
+                                <a
+                                    class="menu-link"
+                                    href="./pages/products.html"
+                                    >الأعمال</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="menu-link"
+                                    href="./pages/articles.html"
+                                    >المقالات</a
+                                >
+                            </li>
+                            <li>
+                                <a class="menu-link" href="#">اتصل بنا</a>
+                            </li>
+                        </ul>
+                        <span onclick="openNav()" class="mob-menu"
+                            ><i class="fa-solid fa-bars"></i
+                        ></span>
+                        <div
+                            id="mySidenav"
+                            class="sidenav"
+                            style="transform: translateX(100%)"
+                        >
+                            <div class="topbar">
+                                <a href="./index.html" class="logo"
+                                    ><img
+                                        src="./assets/logo.svg"
+                                        width="100%"
+                                        height="80px"
+                                /></a>
+                                <a
+                                    href="javascript:void(0)"
+                                    class="closebtn"
+                                    onclick="closeNav()"
+                                    ><i class="fa-solid fa-xmark"></i
+                                ></a>
+                            </div>
+                            <div class="links">
+                                <ul class="list-unstyled ps-0">
+                                    <li class="mb-1">
+                                        <a href="./index.html">
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#home-collapse"
+                                                aria-expanded="false"
+                                                href="./index.html"
+                                            >
+                                                الرئيسية
+                                            </button></a
+                                        >
+                                    </li>
+                                    <li class="mb-1">
+                                        <a>
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#dashboard-collapse"
+                                                aria-expanded="true"
+                                            >
+                                                من نحن
+                                            </button></a
+                                        >
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="./pages/products.html">
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#orders-collapse"
+                                                aria-expanded="false"
+                                            >
+                                                خدماتنا
+                                            </button></a
+                                        >
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="./pages/products.html">
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#account-collapse"
+                                                aria-expanded="false"
+                                            >
+                                                الأعمال
+                                            </button></a
+                                        >
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="./pages/articles.html">
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#account-collapse"
+                                                aria-expanded="false"
+                                            >
+                                                المقالات
+                                            </button></a
+                                        >
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="./pages/products.html">
+                                            <button
+                                                class="btn btn-toggle align-items-center rounded collapsed"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#account-collapse"
+                                                aria-expanded="false"
+                                            >
+                                                اتصل بنا
+                                            </button></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottombar">
+                                <div>
+                                    <a href="#"
+                                        ><img
+                                            src="./assets/assets-22.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                    <a href="#">
+                                        <img
+                                            src="./assets/assets-23.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                    <a href="#"
+                                        ><img
+                                            src="./assets/assets-24.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                    <a href="#"
+                                        ><img
+                                            src="./assets/assets-24.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                    <a href="#"
+                                        ><img
+                                            src="./assets/assets-25.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                    <img
+                                        src="./assets/assets-26.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />
+                                    <a href="#"
+                                        ><img
+                                            src="./assets/assets-27.svg"
+                                            width="30px"
+                                            height="30px"
+                                    /></a>
+                                </div>
+                                <span>احدي شركات مجموعة براق </span>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="devo-intro">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="intro-content">
+                            <h2>
+                                انضم إلينا برؤيتك.<br />
+                                وسوف نساعدك علي تحقيقها برؤيتنا
+                            </h2>
+                            <img
+                                src="./assets/assets-01.svg"
+                                class="vec1"
+                                width="40px"
+                                height="40px"
+                            />
+                            <p>
+                                عن طريق فهم جمهورك المستهدف وتحديد الأهداف
+                                الصحيحة وباستخدام استراتيجية فعاله مبنية علي
+                                المحتوي الجيد والعناصر المرئية الجذابة نساعدك
+                                على الوصول إلى عملائهم، وبناء الولاء للعلامة
+                                التجارية و اكتشاف فرص تسويقية جديدة تساعد علي
+                                ازدهار نشاطك.
+                            </p>
+                            <a href="#" class="mybtn">
+                                <img
+                                    src="./assets/whatsapp-icon.svg"
+                                    width="25px"
+                                    height="25px"
+                                />
+                                احصل علي استشارة مجانية
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <img src="./assets/hero.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qoute">
+            <img src="./assets/about-qoute.svg" width="90px" height="90px" />
+            <h3>كل اسم له حكاية <br />ما هي قصتنا وكيف بدأنا!</h3>
+        </div>
+        <div class="devo-who">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="who-img">
+                            <img src="./assets/about.svg" />
+                            <img
+                                src="./assets/assets-02.svg"
+                                width="200px"
+                                height="200px"
+                                class="vec2"
+                            />
+                            <img
+                                src="./assets/assets-04.svg"
+                                width="60px"
+                                height="60px"
+                                class="vec3"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="who-content">
+                            <img
+                                src="./assets/assets-03.svg"
+                                width="90px"
+                                height="90px"
+                                class="vec4"
+                            />
+                            <h2>من نحن</h2>
+                            <p>
+                                بدأت تويجن كفريق صغير عام 2018 و تطورت حتى
+                                انطلقت كشركة ضمن مجموعة شركات تقدم خدمات تسويقية
+                                كاملة متكاملة وبمساعدة شركاتنا الشقيقة كونا فريق
+                                من المبدعين في صناعة المحتوى التفاعلي الجيد وخلق
+                                استراتيجيات تسويقية تحقق أعلى عائد ممكن من
+                                الاستثمار لشركائنا.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="devo-how">
+            <div class="container">
+                <div class="title">
+                    <h3>
+                        نعمل بحماس<br />
+                        على تحويل رؤيتك إلى حقيقة
+                    </h3>
+                    <span>و هنا كيف نعمل</span>
+                    <img
+                        src="./assets/assets-05.svg"
+                        width="80px"
+                        height="80px"
+                        class="vec5"
+                    />
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="how-content">
+                            <h5>نوفر عليك <br />مجهود الوصول إلى عملائك</h5>
+                            <p>
+                                تويجن تقوم بكل البحث الضروري لبناء حسابات شركتك
+                                على منصات التواصل الإجتماعي كما نقوم بدراسة
+                                علامتك التجارية و السوق الخاص بها من ناحية
+                                المكان و التخصص، ثم نقوم في النهاية ببناء
+                                استراتيجيتك من حيث الأهداف و تقويم كامل
+                                لمنشوراتك و سياسة الردود الخاصة بك و بناء حملات
+                                منصات التواصل الإجتماعي بكفاءة و فعالية.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="how-content">
+                            <h5>
+                                نبدأ<br />
+                                خطة الترويج الخاصة بك
+                            </h5>
+                            <p>
+                                باستخدام محتوى و طريقة توصيل مناسبين سواء كان
+                                محتوى كتابي، تصميم، فيديو موشن جرافيك أو عن طريق
+                                التسويق بالبريد الإلكتروني. في كل خطوة نقف و
+                                نحلل البيانات و نتخذ القرارات الملائمة في كل
+                                مرحلة.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="how-content">
+                            <h5>
+                                وفي النهاية<br />
+                                تحقق النقاط الهامة في خططك
+                            </h5>
+                            <p>
+                                تواجد شركتك الإلكتروني أحد أهم الأدوات في
+                                التواصل المستمر مع عملائك و الوصول إلى شريحة
+                                أكبر من العملاء المحتملين بما تقدمه من خدمات أو
+                                منتجات
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qoute">
+            <img src="./assets/about-qoute.svg" width="90px" height="90px" />
+            <h3>كل اسم له حكاية <br />ما هي قصتنا وكيف بدأنا!</h3>
+        </div>
+        <div class="devo-services">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+                        <div class="services-content">
+                            <img
+                                src="./assets/assets-07.svg"
+                                width="100px"
+                                height="100px"
+                                class="vec7"
+                            />
+                            <img
+                                src="./assets/assets-08.svg"
+                                width="100px"
+                                height="100px"
+                                class="vec8"
+                            />
+                            <h2>خدمات التسويق</h2>
+                            <p>
+                                بدأت تويجن كفريق صغير عام 2018 و تطورت حتى
+                                انطلقت كشركة ضمن مجموعة شركات تقدم خدمات تسويقية
+                                كاملة متكاملة وبمساعدة شركاتنا الشقيقة كونا فريق
+                                من المبدعين في صناعة المحتوى التفاعلي الجيد وخلق
+                                استراتيجيات تسويقية تحقق أعلى عائد ممكن من
+                                الاستثمار لشركائنا.
+                            </p>
+                            <ul>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />استراتيجيات التحليل
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الحملات الإعلانية
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />تحسين محركات البحث
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />استراتيجيات والخطط التسويقية
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />إدارة الحسابات
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />التسويق بالمحتوى
+                                </li>
+                            </ul>
+                            <a href="#" class="mybtn">
+                                <img
+                                    src="./assets/whatsapp-icon.svg"
+                                    width="25px"
+                                    height="25px"
+                                />
+                                احصل علي خدمتك الان
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="services-img">
+                            <img src="./assets/services-marketing.svg" />
+                            <img
+                                src="./assets/assets-06.svg"
+                                width="90px"
+                                height="90px"
+                                class="vec6"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="devo-services">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-6 order-1 order-lg-0">
+                        <img src="./assets/services-design.svg" />
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="services-content">
+                            <h2>خدمات التصميم</h2>
+                            <p>
+                                بدأت تويجن كفريق صغير عام 2018 و تطورت حتى
+                                انطلقت كشركة ضمن مجموعة شركات تقدم خدمات تسويقية
+                                كاملة متكاملة وبمساعدة شركاتنا الشقيقة كونا فريق
+                                من المبدعين في صناعة المحتوى التفاعلي الجيد وخلق
+                                استراتيجيات تسويقية تحقق أعلى عائد ممكن من
+                                الاستثمار لشركائنا.
+                            </p>
+                            <ul>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الشعارات
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />دليل الهوية
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />بروفايل الشركات
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />مجلات العروض
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الهوية التجارية
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />التصميم الإعلاني
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />كتالوج المنتجات
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />تصميمات السوشيال ميديا
+                                </li>
+                            </ul>
+                            <a href="#" class="mybtn">
+                                <img
+                                    src="./assets/whatsapp-icon.svg"
+                                    width="25px"
+                                    height="25px"
+                                />
+                                احصل علي خدمتك الان
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="devo-services">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+                        <div class="services-content">
+                            <h2>خدمات الفيديو</h2>
+                            <p>
+                                بدأت تويجن كفريق صغير عام 2018 و تطورت حتى
+                                انطلقت كشركة ضمن مجموعة شركات تقدم خدمات تسويقية
+                                كاملة متكاملة وبمساعدة شركاتنا الشقيقة كونا فريق
+                                من المبدعين في صناعة المحتوى التفاعلي الجيد وخلق
+                                استراتيجيات تسويقية تحقق أعلى عائد ممكن من
+                                الاستثمار لشركائنا.
+                            </p>
+                            <ul>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />تحريك الشعار
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الفيديو الإعلاني
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الموشن جرافيك
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/list-item.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />الفيديو التعريفي
+                                </li>
+                            </ul>
+                            <a href="#" class="mybtn">
+                                <img
+                                    src="./assets/whatsapp-icon.svg"
+                                    width="25px"
+                                    height="25px"
+                                />
+                                احصل علي خدمتك الان
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="services-img">
+                            <img src="./assets/services-media.svg" />
+                            <img
+                                src="./assets/assets-10.svg"
+                                width="120px"
+                                height="120px"
+                                class="vec9"
+                            />
+                            <img
+                                src="./assets/assets-11.svg"
+                                width="120px"
+                                height="120px"
+                                class="vec10"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="devo-form">
+            <div class="container">
+                <div class="row">
+                    <h3>نحن نسعد بخدمتك دائما</h3>
+                    <span
+                        >أكمل النموذج أدناه حتى نتمكن من التحدث إليك في أقرب
+                        وقت</span
+                    >
+                </div>
+            </div>
+        </div> -->
+        <div class="devo-top-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <div class="first-content">
+                                <span>
+                                    <img
+                                        src="./assets/assets-16.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />المنصورة - بجوار مستشفى التأمين الصحي -
+                                    مصر
+                                </span>
+
+                                <span class="second-content">
+                                    <img
+                                        src="./assets/assets-17.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />
+                                    info@twision.agency
+                                </span>
+                                <span
+                                    ><img
+                                        src="./assets/assets-15.svg"
+                                        width="30px"
+                                        height="30px"
+                                    />
+                                    +2 01555924656</span
+                                >
+                            </div>
+
+                            <div class="mybox">
+                                <img
+                                    src="./assets/assets-13.svg"
+                                    width="300px"
+                                    height="350px"
+                                />
+                            </div>
+                        </div>
+                        <img src="./assets/assets-14.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="devo-bottom-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <span>جميع الحقوق محفوظة لـ تويجن @20</span>
+                            <div>
+                                <img
+                                    src="./assets/assets-22.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-23.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-24.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-24.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-25.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-26.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                                <img
+                                    src="./assets/assets-27.svg"
+                                    width="30px"
+                                    height="30px"
+                                />
+                            </div>
+                            <span>احدي شركات مجموعة براق </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- js for bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+        <!-- js for bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.transform =
+                    "translateX( 0 )";
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.transform =
+                    "translateX(100%)";
+                document.body.style.overflow = "scroll";
+            }
+        </script>
+    </body>
+</html>
