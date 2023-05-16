@@ -481,6 +481,7 @@ a {
         width: 100%;
         display: flex;
         align-items: flex-end;
+        color: var(--text-color);
         .first-content {
             width: 100%;
             display: flex;
@@ -488,6 +489,7 @@ a {
             align-items: center;
             span:nth-child(2) {
                 margin-top: 200px;
+
                 @media (max-width: 995px) {
                     margin-top: 0;
                 }
@@ -495,10 +497,14 @@ a {
             span {
                 font-weight: 700;
                 font-size: 20px;
+                a {
+                    color: var(--text-color);
+                }
+                a:hover {
+                    color: var(--primary-color);
+                }
             }
-            span:hover {
-                color: var(--primary-color);
-            }
+
             @media (max-width: 995px) {
                 flex-direction: column;
                 text-align: center;
@@ -659,9 +665,12 @@ a {
             display: flex;
             align-items: center;
             justify-content: center;
-            img {
-                // height: 250px;
+            a {
                 width: 100%;
+                img {
+                    // height: 250px;
+                    width: 100%;
+                }
             }
         }
         .swiper-button-prev-unique {
@@ -723,7 +732,12 @@ a {
             background-position: center;
             background-size: contain;
             color: var(--text-color);
+            height: 60px;
             font-weight: 700;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .active,
         .menu-link:hover {
@@ -732,19 +746,22 @@ a {
             background-position: center;
             background-size: contain;
         }
-        @media (max-width: 768px) {
-            .menu-link {
-                padding: 10px 7px;
-                font-weight: 500;
-                font-size: 19px;
-            }
-        }
+        // @media (max-width: 768px) {
+        //     .menu-link {
+        //         padding: 10px 7px;
+        //         font-weight: 500;
+        //         font-size: 19px;
+        //     }
+        // }
         @media (max-width: 450px) {
             margin-bottom: 15px;
-            .menu-link {
-                padding: 10px 3px;
-                font-weight: 500;
-                font-size: 13px;
+            flex-direction: column;
+            li {
+                margin-bottom: 15px;
+                width: 100%;
+                .menu-link {
+                    width: 100%;
+                }
             }
         }
     }
@@ -764,16 +781,45 @@ a {
         h5 {
             font-weight: 700;
         }
-
-        @media (max-width: 995px) {
-            padding: 0px 170px;
+        a {
+            background-image: url("./assets/blog-post-btn.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 130px;
+            font-weight: 700;
+            font-size: 18px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-color);
         }
+        // @media (max-width: 995px) {
+        //     // padding: 0px 170px;
+        // }
         @media (max-width: 765px) {
             padding: 0px 85px;
         }
         @media (max-width: 395px) {
             padding: 16px 10px;
         }
+    }
+    .more-btn {
+        background-image: url("./assets/cat-btn.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: var(--text-color);
+        font-weight: 700;
+        font-size: 19px;
+        text-align: center;
     }
     @media (max-width: 450px) {
         margin-top: 60px;
