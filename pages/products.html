@@ -43,6 +43,12 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar">
+                        <a class="whats-icon"
+                            ><img
+                                src="./../assets/whatsapp-icon.svg"
+                                width="25px"
+                                height="25px"
+                        /></a>
                         <a class="logo"
                             ><img
                                 src="./../assets/logo.svg"
@@ -56,10 +62,16 @@
                                 >
                             </li>
                             <li>
-                                <a class="menu-link" href="#">من نحن</a>
+                                <a class="menu-link" href="./../index.html#who"
+                                    >من نحن</a
+                                >
                             </li>
                             <li>
-                                <a class="menu-link" href="#">خدماتنا</a>
+                                <a
+                                    class="menu-link"
+                                    href="./../index.html#services"
+                                    >خدماتنا</a
+                                >
                             </li>
                             <li>
                                 <a
@@ -74,7 +86,11 @@
                                 >
                             </li>
                             <li>
-                                <a class="menu-link" href="#">اتصل بنا</a>
+                                <a
+                                    class="menu-link"
+                                    href="./../index.html#contact"
+                                    >اتصل بنا</a
+                                >
                             </li>
                         </ul>
                         <span onclick="openNav()" class="mob-menu"
@@ -114,7 +130,7 @@
                                         >
                                     </li>
                                     <li class="mb-1">
-                                        <a>
+                                        <a href="./../index.html#who">
                                             <button
                                                 class="btn btn-toggle align-items-center rounded collapsed"
                                                 data-bs-toggle="collapse"
@@ -126,7 +142,7 @@
                                         >
                                     </li>
                                     <li class="mb-1">
-                                        <a href="#">
+                                        <a href="./../index.html#services">
                                             <button
                                                 class="btn btn-toggle align-items-center rounded collapsed"
                                                 data-bs-toggle="collapse"
@@ -162,7 +178,7 @@
                                         >
                                     </li>
                                     <li class="mb-1">
-                                        <a href="#">
+                                        <a href="./../index.html#contact">
                                             <button
                                                 class="btn btn-toggle align-items-center rounded collapsed"
                                                 data-bs-toggle="collapse"
@@ -249,7 +265,11 @@
                                 التجارية و اكتشاف فرص تسويقية جديدة تساعد علي
                                 ازدهار نشاطك.
                             </p>
-                            <a href="#" class="mybtn">
+                            <a
+                                href="https://wa.me/+201555924656"
+                                class="mybtn mb-3"
+                                target="_blank"
+                            >
                                 <img
                                     src="./../assets/whatsapp-icon.svg"
                                     width="25px"
@@ -823,14 +843,17 @@
                                 />
                             </div>
                         </div>
-                        <img src="./assets/assets-14.svg" />
+                        <img src="./../assets/assets-14.svg" />
                     </div>
                 </div>
             </div>
         </div>
         <div class="devo-bottom-footer">
             <div class="content">
-                <span>جميع الحقوق محفوظة لـ تويجن @20</span>
+                <span>
+                    جميع الحقوق محفوظة لـ تويجن @
+                    <span class="year" id="year"></span>
+                </span>
                 <div>
                     <a href="#">
                         <img
@@ -840,25 +863,13 @@
                     /></a>
                     <a href="#">
                         <img
+                            src="./../assets/assets-24.svg"
+                            width="30px"
+                            height="30px"
+                    /></a>
+                    <a href="#">
+                        <img
                             src="./../assets/assets-23.svg"
-                            width="30px"
-                            height="30px"
-                    /></a>
-                    <a href="#">
-                        <img
-                            src="./../assets/assets-24.svg"
-                            width="30px"
-                            height="30px"
-                    /></a>
-                    <a href="#">
-                        <img
-                            src="./../assets/assets-24.svg"
-                            width="30px"
-                            height="30px"
-                    /></a>
-                    <a href="#">
-                        <img
-                            src="./../assets/assets-25.svg"
                             width="30px"
                             height="30px"
                     /></a>
@@ -871,6 +882,13 @@
                     <a href="#">
                         <img
                             src="./../assets/assets-27.svg"
+                            width="30px"
+                            height="30px"
+                    /></a>
+
+                    <a href="#">
+                        <img
+                            src="./../assets/assets-25.svg"
                             width="30px"
                             height="30px"
                     /></a>
@@ -964,6 +982,9 @@
                     },
                 },
             });
+            var date = new Date();
+            var current_date = date.getFullYear();
+            document.getElementById("year").innerHTML = current_date;
         </script>
     </body>
 </html>
