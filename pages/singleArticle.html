@@ -36,7 +36,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
         />
-        <link rel="stylesheet" href="./../style.css?v=123" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./../style.css?v=345" />
     </head>
     <body>
         <div class="container">
@@ -246,7 +250,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="cover-content">
+                        <div
+                            class="cover-content"
+                            data-aos="zoom-in"
+                            data-aos-duration="500"
+                        >
                             <img
                                 src="./../assets/hero-img.png"
                                 class="img-fluid"
@@ -285,7 +293,11 @@
                             height="90px"
                             class="vec24"
                         />
-                        <div class="right-cont">
+                        <div
+                            class="right-cont"
+                            data-aos="fade-left"
+                            data-aos-duration="500"
+                        >
                             <h2>
                                 انضم إلينا برؤيتك.<br />
                                 و سنساعدك على تحقيقها برؤيتنا
@@ -341,7 +353,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12">
-                        <div class="left-cont">
+                        <div
+                            class="left-cont"
+                            data-aos="fade-right"
+                            data-aos-duration="500"
+                        >
                             <div class="sec mb-5">
                                 <div class="title">التصنيفات</div>
                                 <ul>
@@ -425,10 +441,26 @@
                 </div>
             </div>
         </div>
-        <div class="qoute">
-            <img src="./../assets/about-qoute.svg" width="90px" height="90px" />
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="qoute"
+                        data-aos="zoom-in"
+                        data-aos-duration="500"
+                    >
+                        <img
+                            src="./../assets/about-qoute.svg"
+                            width="90px"
+                            height="90px"
+                        />
 
-            <h2 style="font-weight: 700; font-size: 35px">مقالات ذات صلة</h2>
+                        <h2 style="font-weight: 700; font-size: 35px">
+                            مقالات ذات صلة
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="devo-swiper" style="margin-bottom: 30px">
             <div class="container">
@@ -437,7 +469,11 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -455,7 +491,11 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -473,7 +513,11 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -491,7 +535,11 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -509,7 +557,11 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -527,7 +579,11 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="mycard">
+                                    <div
+                                        class="mycard"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                    >
                                         <h5>
                                             انضم إلينا برؤيتك.<br />
                                             و سنساعدك على تحقيقها برؤيتنا
@@ -666,17 +722,21 @@
         <!-- SCRIPT OF FANCY BOX -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <!-- SCRIPT OF FANCY BOX -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
         <script>
             function openNav() {
                 document.getElementById("mySidenav").style.transform =
                     "translateX( 0 )";
                 document.body.style.overflow = "hidden";
+                document.querySelector("html").style.overflow = "hidden";
             }
 
             function closeNav() {
                 document.getElementById("mySidenav").style.transform =
                     "translateX(100%)";
                 document.body.style.overflow = "scroll";
+                document.querySelector("html").style.overflow = "scroll";
             }
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 3,
@@ -711,6 +771,12 @@
                         slidesPerView: 3,
                         spaceBetween: 20,
                     },
+                },
+            });
+            AOS.init({
+                disable: function () {
+                    var maxWidth = 800;
+                    return window.innerWidth < maxWidth;
                 },
             });
             var date = new Date();

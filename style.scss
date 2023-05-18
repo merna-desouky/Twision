@@ -5,6 +5,10 @@
 
     --color: #a5a5a5;
 }
+html,
+body {
+    overflow-x: hidden;
+}
 //global styles
 body {
     background-image: url("./assets/website-bg.jpg");
