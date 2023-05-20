@@ -9,6 +9,7 @@ html,
 body {
     overflow-x: hidden;
 }
+
 //global styles
 body {
     background-image: url("./assets/website-bg.jpg");
@@ -93,6 +94,14 @@ a {
     align-items: center;
     margin-bottom: 120px;
     margin-top: 15px;
+    // position: fixed;
+
+    // position: sticky;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+
     .logo {
         margin-bottom: 60px;
     }
@@ -934,9 +943,9 @@ a {
         //         font-size: 19px;
         //     }
         // }
-        @media (max-width: 450px) {
-            margin-bottom: 15px;
-            flex-direction: column;
+        @media (max-width: 500px) {
+            text-align: center;
+            margin-bottom: 0;
             li {
                 margin-bottom: 15px;
                 width: 100%;
@@ -1035,6 +1044,10 @@ a {
         p {
             line-height: 30px;
             font-weight: 500;
+        }
+        @media (max-width: 700px) {
+            align-items: center;
+            text-align: center;
         }
     }
     .left-cont {
