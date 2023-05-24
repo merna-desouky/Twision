@@ -40,216 +40,199 @@
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./../style.css?v=678" />
+        <link rel="stylesheet" href="./../style.css?v=123" />
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar">
-                        <span onclick="openNav()" class="mob-menu"
-                            ><i class="fa-solid fa-bars"></i
-                        ></span>
-                        <a class="logo"
+        <nav class="navbar">
+            <div class="container">
+                <span onclick="openNav()" class="mob-menu"
+                    ><i class="fa-solid fa-bars"></i
+                ></span>
+                <a class="logo" href="./../index.html"
+                    ><img src="./../assets/logo.svg" width="100%" height="90px"
+                /></a>
+                <ul class="main-menu">
+                    <li>
+                        <a class="menu-link" href="./../index.html">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a class="menu-link" href="./../index.html#who"
+                            >من نحن</a
+                        >
+                    </li>
+                    <li>
+                        <a class="menu-link" href="./../index.html#services"
+                            >خدماتنا</a
+                        >
+                    </li>
+                    <li>
+                        <a class="menu-link" href="./products.html">الأعمال</a>
+                    </li>
+                    <li>
+                        <a class="menu-link active" href="./articles.html"
+                            >المقالات</a
+                        >
+                    </li>
+                    <li>
+                        <a class="menu-link" href="./../index.html#contact"
+                            >اتصل بنا</a
+                        >
+                    </li>
+                </ul>
+                <a
+                    class="whats-icon"
+                    href="https://wa.me/+201555924656"
+                    class="mybtn mb-3"
+                    target="_blank"
+                    ><img
+                        src="./../assets/whatsapp-icon.svg"
+                        width="25px"
+                        height="25px"
+                /></a>
+                <div
+                    id="mySidenav"
+                    class="sidenav"
+                    style="transform: translateX(100%)"
+                >
+                    <div class="topbar">
+                        <a href="./../index.html" class="logo"
                             ><img
                                 src="./../assets/logo.svg"
                                 width="100%"
-                                height="90px"
+                                height="80px"
                         /></a>
-                        <ul class="main-menu">
-                            <li>
-                                <a class="menu-link" href="./../index.html"
-                                    >الرئيسية</a
+                        <a
+                            href="javascript:void(0)"
+                            class="closebtn"
+                            onclick="closeNav()"
+                            ><i class="fa-solid fa-xmark"></i
+                        ></a>
+                    </div>
+                    <div class="links">
+                        <ul class="list-unstyled ps-0">
+                            <li class="mb-1">
+                                <a href="./../index.html">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#home-collapse"
+                                        aria-expanded="false"
+                                    >
+                                        الرئيسية
+                                    </button></a
                                 >
                             </li>
-                            <li>
-                                <a class="menu-link" href="./../index.html#who"
-                                    >من نحن</a
+                            <li class="mb-1">
+                                <a href="./../index.html#who">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#dashboard-collapse"
+                                        aria-expanded="true"
+                                    >
+                                        من نحن
+                                    </button></a
                                 >
                             </li>
-                            <li>
-                                <a
-                                    class="menu-link"
-                                    href="./../index.html#services"
-                                    >خدماتنا</a
+                            <li class="mb-1">
+                                <a href="./../index.html#services">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#orders-collapse"
+                                        aria-expanded="false"
+                                    >
+                                        خدماتنا
+                                    </button></a
                                 >
                             </li>
-                            <li>
-                                <a class="menu-link" href="./products.html"
-                                    >الأعمال</a
+                            <li class="mb-1">
+                                <a href="./products.html">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#account-collapse"
+                                        aria-expanded="false"
+                                    >
+                                        الأعمال
+                                    </button></a
                                 >
                             </li>
-                            <li>
-                                <a
-                                    class="menu-link active"
-                                    href="./articles.html"
-                                    >المقالات</a
+                            <li class="mb-1">
+                                <a href="./articles.html">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#account-collapse"
+                                        aria-expanded="false"
+                                    >
+                                        المقالات
+                                    </button></a
                                 >
                             </li>
-                            <li>
-                                <a
-                                    class="menu-link"
-                                    href="./../index.html#contact"
-                                    >اتصل بنا</a
+                            <li class="mb-1">
+                                <a href="./../index.html#contact">
+                                    <button
+                                        class="btn btn-toggle align-items-center rounded collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#account-collapse"
+                                        aria-expanded="false"
+                                    >
+                                        اتصل بنا
+                                    </button></a
                                 >
                             </li>
                         </ul>
-                        <a
-                            class="whats-icon"
-                            href="https://wa.me/+201555924656"
-                            class="mybtn mb-3"
-                            target="_blank"
-                            ><img
-                                src="./../assets/whatsapp-icon.svg"
-                                width="25px"
-                                height="25px"
-                        /></a>
-                        <div
-                            id="mySidenav"
-                            class="sidenav"
-                            style="transform: translateX(100%)"
-                        >
-                            <div class="topbar">
-                                <a href="./../index.html" class="logo"
-                                    ><img
-                                        src="./../assets/logo.svg"
-                                        width="100%"
-                                        height="80px"
-                                /></a>
-                                <a
-                                    href="javascript:void(0)"
-                                    class="closebtn"
-                                    onclick="closeNav()"
-                                    ><i class="fa-solid fa-xmark"></i
-                                ></a>
-                            </div>
-                            <div class="links">
-                                <ul class="list-unstyled ps-0">
-                                    <li class="mb-1">
-                                        <a href="./../index.html">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#home-collapse"
-                                                aria-expanded="false"
-                                            >
-                                                الرئيسية
-                                            </button></a
-                                        >
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="./../index.html#who">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#dashboard-collapse"
-                                                aria-expanded="true"
-                                            >
-                                                من نحن
-                                            </button></a
-                                        >
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="./../index.html#services">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#orders-collapse"
-                                                aria-expanded="false"
-                                            >
-                                                خدماتنا
-                                            </button></a
-                                        >
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="./products.html">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#account-collapse"
-                                                aria-expanded="false"
-                                            >
-                                                الأعمال
-                                            </button></a
-                                        >
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="./articles.html">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#account-collapse"
-                                                aria-expanded="false"
-                                            >
-                                                المقالات
-                                            </button></a
-                                        >
-                                    </li>
-                                    <li class="mb-1">
-                                        <a href="./../index.html#contact">
-                                            <button
-                                                class="btn btn-toggle align-items-center rounded collapsed"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#account-collapse"
-                                                aria-expanded="false"
-                                            >
-                                                اتصل بنا
-                                            </button></a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bottombar">
-                                <div>
-                                    <a href="#"
-                                        ><img
-                                            src="./../assets/assets-22.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                    <a href="#">
-                                        <img
-                                            src="./../assets/assets-23.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                    <a href="#"
-                                        ><img
-                                            src="./../assets/assets-24.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                    <a href="#"
-                                        ><img
-                                            src="./../assets/assets-24.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                    <a href="#"
-                                        ><img
-                                            src="./../assets/assets-25.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                    <img
-                                        src="./../assets/assets-26.svg"
-                                        width="30px"
-                                        height="30px"
-                                    />
-                                    <a href="#"
-                                        ><img
-                                            src="./../assets/assets-27.svg"
-                                            width="30px"
-                                            height="30px"
-                                    /></a>
-                                </div>
-                                <span>احدي شركات مجموعة براق </span>
-                            </div>
+                    </div>
+                    <div class="bottombar">
+                        <div>
+                            <a href="#"
+                                ><img
+                                    src="./../assets/assets-22.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
+                            <a href="#">
+                                <img
+                                    src="./../assets/assets-23.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="./../assets/assets-24.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="./../assets/assets-24.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="./../assets/assets-25.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
+                            <img
+                                src="./../assets/assets-26.svg"
+                                width="30px"
+                                height="30px"
+                            />
+                            <a href="#"
+                                ><img
+                                    src="./../assets/assets-27.svg"
+                                    width="30px"
+                                    height="30px"
+                            /></a>
                         </div>
-                    </nav>
+                        <span>احدي شركات مجموعة براق </span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="devo-intro">
             <div class="container">
                 <div class="row gy-5">
