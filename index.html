@@ -37,11 +37,11 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="./style.css?v=123" />
+        <link rel="stylesheet" href="./style.css?v=456" />
     </head>
     <body>
-        <nav class="navbar">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar" id="navbar">
                 <span onclick="openNav()" class="mob-menu"
                     ><i class="fa-solid fa-bars"></i
                 ></span>
@@ -228,8 +228,8 @@
                         <span>احدي شركات مجموعة براق </span>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <div class="devo-intro">
             <div class="container">
                 <div class="row gy-5">
@@ -369,7 +369,7 @@
                         <div
                             class="how-content"
                             data-aos="zoom-in"
-                            data-aos-duration="600"
+                            data-aos-duration="500"
                         >
                             <h5>نوفر عليك <br />مجهود الوصول إلى عملائك</h5>
                             <p>
@@ -387,7 +387,7 @@
                         <div
                             class="how-content"
                             data-aos="zoom-in"
-                            data-aos-duration="600"
+                            data-aos-duration="500"
                         >
                             <h5>
                                 نبدأ<br />
@@ -406,7 +406,7 @@
                         <div
                             class="how-content"
                             data-aos="zoom-in"
-                            data-aos-duration="600"
+                            data-aos-duration="500"
                         >
                             <h5>
                                 وفي النهاية<br />
@@ -865,7 +865,21 @@
                     return window.innerWidth < maxWidth;
                 },
             });
-
+            window.onscroll = function (ev) {
+                if (window.scrollY > 500) {
+                    document
+                        .getElementById("navbar")
+                        .classList.add("stickynav");
+                    var navbar_height =
+                        document.querySelector(".navbar").offsetHeight;
+                    document.body.style.paddingTop = navbar_height + "px";
+                } else {
+                    document
+                        .getElementById("navbar")
+                        .classList.remove("stickynav");
+                    document.body.style.paddingTop = "0";
+                }
+            };
             var date = new Date();
             var current_date = date.getFullYear();
             document.getElementById("year").innerHTML = current_date;

@@ -2,7 +2,6 @@
 :root {
     --primary-color: #f0c939;
     --text-color: #333;
-
     --color: #a5a5a5;
 }
 html,
@@ -90,21 +89,45 @@ a {
 //Start of nav style
 .navbar {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    // margin-bottom: 120px;
-    // margin-top: 15px;
-    background-image: url("./assets/website-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 18px 0;
-    background-color: #fff;
-    z-index: 999;
-    box-shadow: rgba(0, 0, 0, 0.24) -1px -1px 8px;
+    width: 100%;
+    margin-bottom: 120px;
+    margin-top: 15px;
+    .logo {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    &.stickynav {
+        flex-direction: row;
+        margin: 0;
+        background-image: url("./assets/website-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 5px 0;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: rgba(0, 0, 0, 0.24) -1px -1px 8px;
+        .logo {
+            margin: 0;
+            margin-inline-start: 70px;
+            img {
+                height: 55px;
+            }
+        }
+        .main-menu {
+            margin-inline-end: 70px;
+            .menu-link {
+                padding: 4px 16px;
+            }
+        }
+    }
+
     .whats-icon {
         display: none;
     }
@@ -259,7 +282,6 @@ a {
 //End of nav style
 .devo-intro {
     margin-bottom: 120px;
-    padding-top: 160px;
     .intro-content {
         display: flex;
         flex-direction: column;
@@ -981,8 +1003,7 @@ a {
 
 //start of single article
 .devo-cover {
-    padding-top: 160px;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     .cover-content {
         display: flex;
         flex-direction: column;

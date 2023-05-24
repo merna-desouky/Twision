@@ -92,8 +92,20 @@ a {
 
 .navbar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-bottom: 120px;
+  margin-top: 15px;
+}
+.navbar .logo {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.navbar.stickynav {
+  flex-direction: row;
+  margin: 0;
   background-image: url("./assets/website-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -101,10 +113,25 @@ a {
   top: 0;
   right: 0;
   left: 0;
-  padding: 18px 0;
+  padding: 5px 0;
   background-color: #fff;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.24) -1px -1px 8px;
+}
+.navbar.stickynav .logo {
+  margin: 0;
+  -webkit-margin-start: 70px;
+          margin-inline-start: 70px;
+}
+.navbar.stickynav .logo img {
+  height: 55px;
+}
+.navbar.stickynav .main-menu {
+  -webkit-margin-end: 70px;
+          margin-inline-end: 70px;
+}
+.navbar.stickynav .main-menu .menu-link {
+  padding: 4px 16px;
 }
 .navbar .whats-icon {
   display: none;
@@ -251,7 +278,6 @@ a {
 }
 .devo-intro {
   margin-bottom: 120px;
-  padding-top: 160px;
 }
 .devo-intro .intro-content {
   display: flex;
@@ -998,8 +1024,7 @@ a {
 }
 
 .devo-cover {
-  padding-top: 160px;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 .devo-cover .cover-content {
   display: flex;
